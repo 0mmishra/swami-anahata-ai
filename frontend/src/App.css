@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #14001a, #0d0d2b, #000);
+  color: white;
+  overflow-x: hidden;
+}
+
+.swami-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #6b21a8;
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 30px #6b21a880;
+  backdrop-filter: blur(12px);
+  animation: fade-in 1s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #c084fc;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #7e22ce;
+  color: white;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #bcbcbc;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  background: #7e22ce;
+  color: white;
+  margin-top: 1rem;
+  border: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #9333ea;
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.answer-box {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #9333ea;
+  color: #e9d5ff;
+  line-height: 1.6;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-in-out;
+}
+
+.swami-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #9333ea;
+  box-shadow: 0 0 20px #9333ea;
+  margin-bottom: 1rem;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px #9333ea;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #9333ea;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .card {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .swami-image {
+    width: 100px;
+    height: 100px;
+  }
+}
