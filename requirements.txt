@@ -1,11 +1,19 @@
+# --- Flask & CORS ---
 flask==2.3.3
 flask-cors==4.0.0
-chromadb==0.5.0
-sentence-transformers==2.2.2
-tokenizers==0.13.3 --only-binary :all:
 
+# --- ChromaDB & Embeddings ---
+chromadb==0.5.0
+sentence-transformers==2.6.1
+tokenizers==0.13.3 --only-binary :all:
 numpy<2.0
+
+# --- Request Handling & Env ---
 requests==2.31.0
 python-dotenv==1.0.1
+
+# --- OpenAI TTS ---
 openai==1.14.3
+
+# --- Optional: Audio Handling ---
 pydub==0.25.1
