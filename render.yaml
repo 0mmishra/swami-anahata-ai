@@ -6,4 +6,4 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python server.py
-    runtime: python3.10
+    runtime: python3.10  # ✅ Force Python 3.10 to avoid building tokenizers
