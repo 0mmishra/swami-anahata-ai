@@ -5,13 +5,14 @@ flask-cors==4.0.0
 # --- ChromaDB & Embeddings ---
 chromadb==0.5.0
 sentence-transformers==2.2.2
+numpy<2.0           # ⚠️ Fix for ChromaDB compatibility
 
 # --- Request Handling & Env ---
 requests==2.31.0
 python-dotenv==1.0.1
 
-# --- OpenAI TTS ---
+# --- OpenAI / ElevenLabs TTS ---
 openai==1.14.3
 
-# --- Audio Handling (optional, if streaming/processing) ---
+# --- Optional: Audio Handling (safe to keep)
 pydub==0.25.1
