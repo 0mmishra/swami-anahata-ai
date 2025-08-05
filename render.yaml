@@ -2,8 +2,6 @@ services:
   - type: web
     name: swami-anahata-backend
     env: python
-    region: oregon
-    plan: free
+    runtime: python3.10
     buildCommand: pip install -r requirements.txt
     startCommand: python server.py
-    runtime: python3.10  # ✅ Force Python 3.10 to avoid building tokenizers
